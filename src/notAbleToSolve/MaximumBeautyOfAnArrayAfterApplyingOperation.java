@@ -114,5 +114,10 @@ public class MaximumBeautyOfAnArrayAfterApplyingOperation {
         return ans;
     }
 
+    // Method3-:
+    // Sort the array.
+    // The problem becomes the following: find maximum subarray A[i … j] such that A[j] - A[i] ≤ 2 * k.
+    // You can solve this using sliding window since it is converted to sub-array problem
+
 
 }
