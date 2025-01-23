@@ -2,68 +2,45 @@ package notAbleToSolve;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-public class CountServersThatCommunicate {
-    /**
-     * You are given a map of a server center, represented as a m * n integer matrix grid, where 1 means that on that
-     * cell there is a server and 0 means that it is no server. Two servers are said to communicate if they are on the
-     * same row or on the same column.
-     *
-     * Return the number of servers that communicate with any other server
-     * */
+public class CountServersThatCommunicate{
     public int countServers(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
 
-        int count = 0;
+        int[] rowCount = new int[m]; // Counts servers in each row
+        int[] colCount = new int[n]; // Counts servers in each column
 
-        ArrayList<Row> list = new ArrayList<>();
-        HashMap<Integer,Integer> hashMap = new HashMap<>();
-
-        for (int i = 0; i <m ; i++) {
-            int countOfServer = 0;
-            int col = -1;
+        // First pass: count the number of servers in each row and column
+        for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if(grid[i][j]==1){
-                    countOfServer++;
-                    col = j;
-                    hashMap.put(j,hashMap.getOrDefault(j,0)+1);
-                }
-            }
-            Row row = new Row(0,countOfServer,col);
-            if(countOfServer>1) count += countOfServer;
-            list.add(row);
-        }
-
-
-
-        // now iterate over the rows with 1 server
-        for (Row row: list){
-            if(row.count==1){
-                int col = row.col;
-                if(hashMap.get(col)>1){
-                    count++;
+                if (grid[i][j] == 1) {
+                    rowCount[i]++;
+                    colCount[j]++;
                 }
             }
         }
 
-        return count;
-    }
-    class Row{
-        int index;
-        int count;
+        int totalServers = 0;
 
-        int col;
-
-        public Row(int index, int count) {
-            this.index = index;
-            this.count = count;
+        // Second pass: count servers that can communicate
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) {
+                    // A server can communicate if there are other servers in its row or column
+                    if (rowCount[i] > 1 || colCount[j] > 1) {
+                        totalServers++;
+                    }
+                }
+            }
         }
 
-        public Row(int index, int count, int col) {
-            this.index = index;
-            this.count = count;
-            this.col = col;
-        }
+        return totalServers;
     }
+
 }
+
+/**
+ * This question is same as Most Stones Removed With Same Row or Column in A2Z Sheet
+ * */
