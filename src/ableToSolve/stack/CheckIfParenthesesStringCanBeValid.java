@@ -1,4 +1,4 @@
-package ableToSolve;
+package ableToSolve.stack;
 
 import java.util.Arrays;
 import java.util.Stack;

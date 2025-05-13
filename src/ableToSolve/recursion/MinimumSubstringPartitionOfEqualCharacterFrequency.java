@@ -1,4 +1,4 @@
-package ableToSolve;
+package ableToSolve.recursion;
 
 public class MinimumSubstringPartitionOfEqualCharacterFrequency {
     /**
