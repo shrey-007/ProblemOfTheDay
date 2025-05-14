@@ -1,4 +1,4 @@
-package notAbleToSolve;
+package notAbleToSolve.Graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package notAbleToSolve;
+package notAbleToSolve.goodQuestions;
 
 import java.util.Stack;
 

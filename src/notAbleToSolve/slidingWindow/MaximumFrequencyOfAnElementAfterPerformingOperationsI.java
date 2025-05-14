@@ -1,4 +1,4 @@
-package notAbleToSolve.RangeProblems;
+package notAbleToSolve.slidingWindow;
 
 public class MaximumFrequencyOfAnElementAfterPerformingOperationsI {
 

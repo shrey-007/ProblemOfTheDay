@@ -1,4 +1,4 @@
-package notAbleToSolve;
+package notAbleToSolve.RangeProblems;
 
 import java.util.Arrays;
 

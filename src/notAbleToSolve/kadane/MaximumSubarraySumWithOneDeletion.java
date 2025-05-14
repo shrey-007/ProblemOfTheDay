@@ -1,4 +1,4 @@
-package notAbleToSolve;
+package notAbleToSolve.kadane;
 
 public class MaximumSubarraySumWithOneDeletion {
     /**

@@ -1,4 +1,4 @@
-package notAbleToSolve;
+package notAbleToSolve.interval;
 
 import java.util.Arrays;
 
