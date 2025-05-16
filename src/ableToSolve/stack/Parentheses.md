@@ -26,10 +26,10 @@
       - If it is ')', it needs to get balanced by some '(', toh dekho stack mai '(' hai kya if yes then good, it got balanced, if no, then try to balance it by unlocked index, usko '(' bana do.
    - So u just need 2 stacks, 1 one the real simulation (standard that we used to use), and one for unlocked indexes. Unlocked valo ko either ( or ) dono ko hi 2nd stck mai daalo. and locked vaalo ko real stack mai daalo 
    - After whole iteration, if the real stack is not empty means , opening bracket balance nhi hue, toh unlocked valo se balance karo, and opening brakctes ko unke baad vaale unlocked indexes hi balance kr skte hai , unke pehle vaale nhi
-6. LongestValidParentheses-: 
+6. LongestValidParentheses(Leetcode Hard)-: 
 7. Generate Parentheses-: given a number n, form a valid balanced string of size 2n.
    - This is try all possible ways
    - at every index we have 2 options, either we put '(' or ')'
    - we can only take ')' if count of '(' is lesser than it.
    - we want count of both '(' = count of ')' = n
-8. 
+8. RemoveInvalidParentheses(Leetcode Hard)-: 
