@@ -45,7 +45,46 @@ public class MinimumNumberOfSwapsToMakeTheStringBalanced {
 
         if(numberOfClosingBracketsMisplaced%2==0){return numberOfClosingBracketsMisplaced/2;}
         else{return numberOfClosingBracketsMisplaced/2+1;}
+    }
 
+    // or you can do this in this way
+    public int minSwaps2(String s) {
+        int numberOfClosingBracketsMisplaced = 0;
+
+        int n = s.length();
+        int open = 0;
+        int close = 0;
+
+        for(int i=0;i<n;i++){
+            char curr = s.charAt(i);
+            if(curr==']') close++;
+            else open++;
+            if(close>open) numberOfClosingBracketsMisplaced++;
+        }
+
+        if(numberOfClosingBracketsMisplaced%2==0){return numberOfClosingBracketsMisplaced/2;}
+        else{return numberOfClosingBracketsMisplaced/2+1;}
+    }
+
+    // or you can do this in this way
+    public int minSwaps3(String s) {
+        int numberOfClosingBracketsMisplaced = 0;
+
+        int n = s.length();
+        int count = 0;
+
+        for(int i=0;i<n;i++){
+            char curr = s.charAt(i);
+            if(curr==']') count--;
+            else count++;
+            if(count<0){
+                numberOfClosingBracketsMisplaced++;
+                count = 0;
+            }
+        }
+
+        if(numberOfClosingBracketsMisplaced%2==0){return numberOfClosingBracketsMisplaced/2;}
+        else{return numberOfClosingBracketsMisplaced/2+1;}
     }
 
 }

@@ -19,6 +19,12 @@ public class CheckIfParenthesesStringCanBeValid {
      *
      * Return true if you can make s a valid parentheses string. Otherwise, return false.
      * */
+
+    // First i tried solving it using DP, har unlocked index par 2 choices thi, but usse TLE aaya
+    // Even after applying memoization, it is showing TLE stuff and memory limit exceeded means it is not a dp question,
+    // it greedy
+    // It has constraints of n<=10^5 means ki it can only be solved by O(N) algorithm, which is greedy obviously
+
     public boolean canBeValid(String s, String locked) {
         Stack<Integer> stack = new Stack<>();
         Stack<Integer> openClose = new Stack<>();
@@ -88,8 +94,7 @@ public class CheckIfParenthesesStringCanBeValid {
         return true;
     }
 
-    // Even after applying memoization, it is showing TLE stuff and memory limit exceeded means it is not a dp question,
-    // it greedy
-    // It has constraints of n<=10^5 means ki it can only be solved by O(N) algorithm, which is greedy obviously
+
+    // It has one more very small code, but not much intuitive like the above one
 
 }

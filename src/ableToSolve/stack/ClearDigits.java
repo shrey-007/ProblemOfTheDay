@@ -10,6 +10,10 @@ public class ClearDigits {
      *
      * Delete the first digit and the closest non-digit character to its left.
      * Return the resulting string after removing all digits.
+     *
+     * ex-: cb34
+     * output-: ""
+     * explain-: 3 ko delete kro toh b ko delete krna pada, toh c4 bacha fir 4 ko delete kro toh c ko delete krna pada
      * */
 
     // ith index par agar digit hai toh i ke peeche vaale indexes ko delete krna hai

@@ -23,7 +23,7 @@ public class MinimumAddToMakeParenthesesValid {
         for (int i = 0; i < n; i++) {
             if(s.charAt(i)=='('){stack.push(s.charAt(i));}
             else{
-                if(stack.isEmpty() || stack.peek()!='('){count++;}
+                if(stack.isEmpty()){count++;}
                 else{stack.pop();}
             }
         }
@@ -42,7 +42,12 @@ public class MinimumAddToMakeParenthesesValid {
         for (int i = 0; i < n; i++) {
             if(s.charAt(i)=='('){count++;}
             else{count--;}
-            if(count<0){ans++;count=0;}
+            if(count<0){
+                // means ki closing jyaada ho gye opening se, toh ek open bracket add krdo toh ek add kra toh ans++
+                ans++;
+                // since ek open bracket add krne par ab balance ho gya hai toh count = 0 krdo
+                count=0;
+            }
         }
 
         if(count>0){ans= ans+count;}
