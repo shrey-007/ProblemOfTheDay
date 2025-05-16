@@ -33,3 +33,5 @@
    - we can only take ')' if count of '(' is lesser than it.
    - we want count of both '(' = count of ')' = n
 8. RemoveInvalidParentheses(Leetcode Hard)-: 
+9. Score of Parentheses-: Not yet solved on leetcode
+10. 
