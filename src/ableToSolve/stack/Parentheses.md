@@ -19,4 +19,11 @@
    - Take a open and close pointer, and increase the open when open bracket and close when close bracket
    - Whenever you encounter close>open, increase x.
    - You can also do it using count, see the code(3 approaches)
-5. CheckIfParenthesesStringCanBeValid-: 
+5. CheckIfParenthesesStringCanBeValid-: Given a string of paranthesis, and a string locked. You can change a character if it is unlocked, otherwise you can't change a locked character. Check if we can make the string valid
+   - You can't do anything to the locked indexes
+   - So if you encounter a locked index-:
+      - If it is '(', just push it to the stack
+      - If it is ')', it needs to get balanced by some '(', toh dekho stack mai '(' hai kya if yes then good, it got balanced, if no, then try to balance it by unlocked index, usko '(' bana do.
+   - So u just need 2 stacks, 1 one the real simulation (standard that we used to use), and one for unlocked indexes. Unlocked valo ko either ( or ) dono ko hi 2nd stck mai daalo. and locked vaalo ko real stack mai daalo 
+   - After whole iteration, if the real stack is not empty means , opening bracket balance nhi hue, toh unlocked valo se balance karo, and opening brakctes ko unke baad vaale unlocked indexes hi balance kr skte hai , unke pehle vaale nhi
+6. 
