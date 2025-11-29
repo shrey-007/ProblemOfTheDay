@@ -21,7 +21,8 @@ public class OneThreeTwoPattern {
     }
     // Reason to use stack-:
     /**
-     * 1. jab bhi multiple dependent for loops ho toh stack use ho skte hai like isme j ki loop i+1 se start this and k ki loop j+1 se toh dependent loops hai toh stack use ho skta hai
+     * 1. jab bhi multiple dependent for loops ho toh stack use ho skte hai like isme j ki loop i+1 se start this and k
+     * ki loop j+1 se toh dependent loops hai toh stack use ho skta hai
      * 2.
      * */
 
